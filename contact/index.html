@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="vieport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/nav.css" />
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/footer.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kontakt</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="../index.html">Strona główna</a></li>
+          <li class="menu__item"><a href="../photos/index.html">Zdjęcia</a></li>
+          <li class="menu__item"><a href="../hobby/index.html">Hobby</a></li>
+          <li class="menu__item"><a href="../table/index.html">Tabela</a></li>
+          <li class="menu__item"><a href="./index.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <main class="main">
+        <h1 class="main__header">Kontakt</h1>
+        <div>
+          <!-- Uwaga, według dobrych praktyk kolejnośc atrybutów ma znaczenie -->
+          <!-- od szczegółu do ogółu -->
+          <div class="main__input">
+            <label for="firstName">Imię: </label>
+            <input
+              id="firstName"
+              name="firstName"
+              class="main__input-text"
+              type="text"
+              placeholder="Imię..."
+            />
+          </div>
+          <div class="main__input">
+            <label for="lastName">Nazwisko: </label>
+            <input
+              id="lastName"
+              name="lastName"
+              class="main__input-text"
+              type="text"
+              placeholder="Nazwisko..."
+            />
+          </div>
+          <div class="main__input">
+            <label for="email">E-mail: </label>
+            <input
+              id="email"
+              name="email"
+              class="main__input-text"
+              type="email"
+              placeholder="E-mail..."
+            />
+          </div>
+          <div class="main__input">
+            <label for="gender">Płeć: </label>
+            <div>
+              <input id="female" name="gender" type="radio" />
+              <label for="female">Kobieta </label>
+            </div>
+            <div>
+              <input id="male" name="gender" type="radio" />
+              <label for="male">Mężczyzna </label>
+            </div>
+            <div>
+              <input id="other" name="gender" type="radio" />
+              <label for="other">Inna </label>
+            </div>
+          </div>
+          <div class="main__input">
+            <label for="questionType">Rodzaj zapytania: </label>
+            <select
+              id="questionType"
+              name="questionType"
+              class="main__input-select"
+            >
+              <option disabled selected value="">Wybierz rodzaj pytania</option>
+              <option value="opinia">Opinia</option>
+              <option value="rada">Rada</option>
+            </select>
+          </div>
+          <div class="main__input">
+            <label for="message">Rodzaj zapytania: </label>
+            <textarea
+              id="message"
+              name="message"
+              class="main__input-textarea"
+              placeholder="Treść..."
+              rows="10"
+              cols="100"
+            >
+            </textarea>
+          </div>
+          <div class="main__input">
+            <label for="attachment">Załącznik: </label>
+            <input
+              id="attachment"
+              name="attachment"
+              class="main__input-file"
+              type="file"
+              placeholder="Dodaj załącznik..."
+            />
+          </div>
+          <div class="main__input">
+            <h5 class="main__statute-header">Regulamin:</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+              aperiam accusantium quibusdam fuga sunt repellat harum vel fugit
+              aspernatur obcaecati! Quae, laudantium minima. Itaque porro
+              mollitia incidunt cupiditate velit nulla.
+            </p>
+            <label for="accept">Akceptuję regulamin: </label>
+            <input
+              id="accept"
+              name="accept"
+              class="main__input-chackbox"
+              type="checkbox"
+            />
+          </div>
+          <div class="main__input main__send-form">
+            <button
+              id="submit"
+              name="submit"
+              class="main__input-button"
+              type="submit"
+            >
+              Wyślij
+            </button>
+          </div>
+          <script src="app.js"></script>
+        </div>
+        <div id="newFormContent" class="main__input"></div>
+      </main>
+      <footer class="footer">Autor: Ja 2022</footer>
+    </div>
+  </body>
+</html>

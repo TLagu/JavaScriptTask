@@ -1,0 +1,28 @@
+#main-header {
+  margin: 10px 0;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 10px;
+  height: 300px;
+  font-size: 25px;
+}
+
+#main-header__title {
+  text-align: center;
+  margin: 0;
+  background-color: silver;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 2em;
+}
+
+#main-header__content {
+  text-align: justify;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: silver;
+  border-radius: 5px;
+  font-size: 1em;
+}
