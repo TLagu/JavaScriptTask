@@ -2,19 +2,16 @@ function displayFormContent() {
   let firstName = document.getElementById("firstName").value;
   let lastName = document.getElementById("lastName").value;
   let email = document.getElementById("email").value;
-  let gender = "";
-  const genderNode = document.querySelector("input[name = gender]:checked");
-  if (genderNode) {
-    for (let i = 0; i < genderNode.labels.length; i++) {
-      gender = genderNode.labels[i].textContent;
-    }
-  }
+  const genderCheckedInput = document.querySelector(
+    "input[name = gender]:checked"
+  );
+  const gender = genderCheckedInput ? genderCheckedInput.value : "";
   let questionTypeSelect = document.getElementById("questionType");
   let questionType =
     questionTypeSelect.options[questionTypeSelect.selectedIndex].text;
   let message = document.getElementById("message").value;
   let attachment = document.getElementById("attachment").value;
-  let accept = document.getElementById("accept").value;
+  let accept = document.getElementById("accept").checked;
 
   document.getElementById("newFormContent").innerHTML = "";
   let toChange = document.getElementById("newFormContent");
@@ -37,8 +34,8 @@ function createParagraph(label, value) {
 
 function createBold(text) {
   let newBold = document.createElement("b");
-  let newText = document.createTextNode(text + ": ");
-  return newBold.appendChild(newText);
+  newBold.innerHTML = text + ": ";
+  return newBold;
 }
 
 document.getElementById("submit").addEventListener("click", displayFormContent);
